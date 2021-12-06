@@ -14,9 +14,7 @@ namespace ChatTranslator
         private void Chat_OnChatMessage(XivChatType type, uint senderId, ref SeString sender, ref SeString message, ref bool isHandled)
         {
             var realOriginalMessage = message;
-            
-            PrintChatToLog(message.TextValue);
-            
+
             try
             {
                 if (isHandled) return;
@@ -44,7 +42,7 @@ namespace ChatTranslator
                 if (_whitelist && !_chosenLanguages.Contains(pos))
                 { yes = false; }
                 //Check for notSelf setting
-                if (_notSelf && ClientState.LocalPlayer.Name == pName)
+                if (ClientState.LocalPlayer is not null && _notSelf && ClientState.LocalPlayer.Name.TextValue == pName.TextValue)
                 { yes = false; }
                 //Check for blacklist settings
                 if (_blacklist.Contains(messageString))
