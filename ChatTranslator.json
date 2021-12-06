@@ -1,0 +1,10 @@
+﻿{
+  "Author": "Haplo064, updated by leatherface-dev",
+  "Name": "ChatTranslator (API 5)",
+  "Punchline": "Chat translation.",
+  "Description": "Enables in-game chat translation.",
+  "RepoUrl": "https://github.com/leatherface-dev/ChatTranslator",
+  "ImageUrls": [],
+  "Changelog": "Update for API 5.",
+  "DalamudApiLevel": 5
+}
